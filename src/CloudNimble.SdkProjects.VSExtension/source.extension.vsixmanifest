@@ -5,6 +5,9 @@
         <DisplayName>SdkProject Extras for VS2017</DisplayName>
         <Description xml:space="preserve">A set of Item Templates to make writing legacy code with SdkProjects easier.</Description>
         <License>Resources\LICENSE</License>
+        <Icon>Resources\Icon.png</Icon>
+        <PreviewImage>Resources\Preview.png</PreviewImage>
+        <Tags>web.config, assembly binding redirects, binding redirects, assembly binding</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,16.0)" />
