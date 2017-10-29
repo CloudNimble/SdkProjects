@@ -5,7 +5,8 @@
     <Description>An EF6 EDMX file, along with a T4 template for SDK projects that generates the proper embedded resources.</Description>
     <Icon>Resources\EntityDatabase.png</Icon>
     <TemplateID>fbac28d4-9a3f-4867-8a81-d95ef7ada833</TemplateID>
-    <ProjectType>CSharp</ProjectType>
+    <ProjectType>Data</ProjectType>
+    <ProjectSubType>CSharp</ProjectSubType>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
     <DefaultName>Model</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>

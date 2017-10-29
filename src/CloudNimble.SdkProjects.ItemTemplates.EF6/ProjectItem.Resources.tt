@@ -35,11 +35,20 @@
 	XmlToString(nodes.Ssdl, Path.Combine(projectPath, ssdlPath));
 
 	//RWM: First use the Host to make sure the project items are the right type, so they get embedded as a resource.
-	var projectItems = GetProjectItemsRecursive(project.ProjectItems).Where(c => resourcePaths.Contains(c.Name));
-	foreach (ProjectItem item in projectItems)
+	var projectItems = GetProjectItemsRecursive(project.ProjectItems).Where(c => c.Name.StartsWith("$itemname$"));
+	foreach (ProjectItem item in projectItems.Where(c => resourcePaths.Contains(c.Name)))
 	{
 		item.Properties.Item("ItemType").Value = "EmbeddedResource";
 	}
+	//RWM: Then remove the model and diagram so you can edit them.
+	foreach (ProjectItem item in projectItems.Where(c => !resourcePaths.Contains(c.Name) && !c.Name.EndsWith(".tt")))
+	{
+		item.Remove();
+	}
+
+	project.Save(project.FullName);
+	//RWM: Sleep so that the save can finish and the file can be reopened.
+	System.Threading.Thread.Sleep(200);
 
 	//RWM: You have to jump through a bunch more hoops to add a LogicalResource, so we'll just manipulate the project file instead.
 	var projectFile = XDocument.Load(project.FileName);
@@ -51,9 +60,12 @@
         {
             item.Add(new XElement("LogicalName", referenceName.Value));
         }
+		if (!item.Descendants().Any(c => c.Name == "DependentUpon"))
+        {
+			item.Add(new XElement("DependentUpon", "Model1.Resources.tt"));
+		}
     }
 	File.WriteAllText(project.FileName, projectFile.ToString(SaveOptions.None));
-
 #>
 <#+
     const string EdmxUri = "http://schemas.microsoft.com/ado/2009/11/edmx";
