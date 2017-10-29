@@ -28,6 +28,10 @@
 
 	var resourcePaths = new List<string> {csdlPath, mslPath, ssdlPath};
 
+	project.Save(project.FullName);
+	//RWM: Sleep so that the save can finish and the file can be reopened.
+	System.Threading.Thread.Sleep(350);
+
 	//RWM: Split the EDMX file and write out the three different resource files.
 	var nodes = GetSectionsFromEdmx(edmxPath);
 	XmlToString(nodes.Csdl, Path.Combine(projectPath, csdlPath));
@@ -48,7 +52,7 @@
 
 	project.Save(project.FullName);
 	//RWM: Sleep so that the save can finish and the file can be reopened.
-	System.Threading.Thread.Sleep(200);
+	System.Threading.Thread.Sleep(350);
 
 	//RWM: You have to jump through a bunch more hoops to add a LogicalResource, so we'll just manipulate the project file instead.
 	var projectFile = XDocument.Load(project.FileName);
