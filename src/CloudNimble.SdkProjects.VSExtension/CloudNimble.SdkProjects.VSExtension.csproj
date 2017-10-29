@@ -69,9 +69,10 @@
     <ProjectReference Include="..\CloudNimble.SdkProjects.ItemTemplates.EF6\CloudNimble.SdkProjects.ItemTemplates.EF6.csproj">
       <Project>{DB1E87FC-3F1C-435C-9D39-B9DA07E651EF}</Project>
       <Name>CloudNimble.SdkProjects.ItemTemplates.EF6</Name>
-      <VSIXSubPath>ItemTemplates</VSIXSubPath>
+      <VSIXSubPath>ItemTemplates\</VSIXSubPath>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <IncludeOutputGroupsInVSIX>TemplateProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <TemplateType>Item</TemplateType>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

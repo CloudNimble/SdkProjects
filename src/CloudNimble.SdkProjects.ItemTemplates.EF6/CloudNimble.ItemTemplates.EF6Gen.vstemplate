@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>EF6 EDMX Resource Generators for SdkProjects</Name>
+    <Description>A T4 template for EF6 in VS2017 SdkProjects that generates the proper embedded resources. Use for existing apps that you are upgrading to SdkProjects.</Description>
+    <Icon>Resources\EntityDatabase.png</Icon>
+    <TemplateID>fbac28d4-9a3f-4867-8a81-d95ef7ada833</TemplateID>
+    <ProjectType>CSharp</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <DefaultName>Model</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    
+    <References>
+      <Reference>
+        <Assembly>System</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Data</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Runtime.Serialization</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Xml</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Core</Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>System.Security</Assembly>
+      </Reference>
+    </References>
+
+    <ProjectItem OpenInEditor="false" TargetFileName="$fileinputname$.Resources.tt" ReplaceParameters="true">ProjectItem.Resources.tt</ProjectItem>
+    <ProjectItem OpenInEditor="true" TargetFileName="ReadMe.txt" ReplaceParameters="true">ReadMe.txt</ProjectItem>
+
+  </TemplateContent>
+
+</VSTemplate>

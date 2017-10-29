@@ -57,16 +57,24 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ReadMe.txt" />
     <Resource Include="Resources\EntityDatabase.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <VSTemplate Include="CloudNimble.ItemTemplates.EF6Gen.vstemplate">
+      <SubType>Designer</SubType>
+      <VSIXSubPath>CSharp\Data</VSIXSubPath>
+    </VSTemplate>
     <Content Include="ProjectItem.edmx" />
     <Content Include="ProjectItem.edmx.diagram">
       <DependentUpon>ProjectItem.edmx</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <VSTemplate Include="CloudNimble.SdkProjects.vstemplate" />
+    <VSTemplate Include="CloudNimble.ItemTemplates.EF6Edmx.vstemplate">
+      <SubType>Designer</SubType>
+      <VSIXSubPath>CSharp\Data</VSIXSubPath>
+    </VSTemplate>
   </ItemGroup>
   <ItemGroup>
     <Content Include="ProjectItem.Resources.tt" />

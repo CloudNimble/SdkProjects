@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>Entity Framework 6 EDMX</Name>
-    <Description>An EF6 EDMX file, along with a T4 template for SDK projects that generates the proper embedded resources.</Description>
+    <Name>EF6 EDMX for SdkProjects w/ Resource Generators</Name>
+    <Description>An EF6 EDMX file, along with a T4 template for VS2017 SdkProjects that generates the proper embedded resources. Use for new projects.</Description>
     <Icon>Resources\EntityDatabase.png</Icon>
     <TemplateID>fbac28d4-9a3f-4867-8a81-d95ef7ada833</TemplateID>
     <ProjectType>CSharp</ProjectType>
-    <ProjectSubType>Data</ProjectSubType>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
     <DefaultName>Model</DefaultName>
     <ProvideDefaultName>true</ProvideDefaultName>
@@ -37,7 +36,8 @@
     <ProjectItem OpenInEditor="false" SubType="" TargetFileName="$fileinputname$.edmx" ReplaceParameters="true" ItemType="None" CustomTool="">ProjectItem.edmx</ProjectItem>
     <ProjectItem OpenInEditor="false" TargetFileName="$fileinputname$.Resources.tt" ReplaceParameters="true">ProjectItem.Resources.tt</ProjectItem>
     <ProjectItem OpenInEditor="false" TargetFileName="$fileinputname$.edmx.diagram" ReplaceParameters="true" ItemType="None" CustomTool="">ProjectItem.edmx.diagram</ProjectItem>
-  
+    <ProjectItem OpenInEditor="true" TargetFileName="ReadMe.txt" ReplaceParameters="true">ReadMe.txt</ProjectItem>
+
   </TemplateContent>
 
   <WizardExtension>
