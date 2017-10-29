@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudNimble.SdkProjects.Ite
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CloudNimble.SdkProjects.VSExtension", "CloudNimble.SdkProjects.VSExtension\CloudNimble.SdkProjects.VSExtension.csproj", "{D281DB5A-50FD-421E-9421-7BC73690B226}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3D6089E6-D348-4CB8-BC2E-87EFAB09D7D2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0DBAB4BA-C93E-429B-B326-C6C29D9E697C}"
 	ProjectSection(SolutionItems) = preProject
-		appveyor.yml = appveyor.yml
-		CHANGELOG.md = CHANGELOG.md
-		README.md = README.md
+		..\appveyor.yml = ..\appveyor.yml
+		..\CHANGELOG.md = ..\CHANGELOG.md
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Global

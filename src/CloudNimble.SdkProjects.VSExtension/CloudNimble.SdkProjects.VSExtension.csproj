@@ -47,9 +47,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\LICENSE">
+    <Content Include="..\..\LICENSE">
       <Link>Resources\LICENSE</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\Preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
@@ -57,7 +66,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CloudNimble.SdkProjects\CloudNimble.SdkProjects.ItemTemplates.EF6.csproj">
+    <ProjectReference Include="..\CloudNimble.SdkProjects.ItemTemplates.EF6\CloudNimble.SdkProjects.ItemTemplates.EF6.csproj">
       <Project>{DB1E87FC-3F1C-435C-9D39-B9DA07E651EF}</Project>
       <Name>CloudNimble.SdkProjects.ItemTemplates.EF6</Name>
       <VSIXSubPath>ItemTemplates</VSIXSubPath>

@@ -1,8 +1,7 @@
 # SdkProject Extras for VS2017
 
 <!-- Replace this badge with your own-->
-[![Build status](https://ci.appveyor.com/api/projects/status/hv6uyc059rqbc6fj?svg=true)](https://ci.appveyor.com/project/madskristensen/extensibilitytools)
-
+[![Build status](https://ci.appveyor.com/api/projects/status/vr63sfhcc26yvdyx?svg=true)](https://ci.appveyor.com/project/robertmclaws/sdkprojects)
 <!-- Update the VS Gallery link after you upload the VSIX-->
 Download this extension from the [VS Marketplace](https://visualstudiogallery.msdn.microsoft.com/[GuidFromGallery])
 or get the [CI build](http://vsixgallery.com/extension/2dd37380-7b86-413a-b26c-b6b2d5e067d4/).

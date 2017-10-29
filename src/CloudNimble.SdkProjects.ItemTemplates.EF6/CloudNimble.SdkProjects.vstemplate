@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
   <TemplateData>
-    <Name>CloudNimble.SdkProjects.ItemTemplates.EF6</Name>
-    <Description>Entity Framework 6 EDMX </Description>
-    <Icon>EntityDatabase.png</Icon>
+    <Name>Entity Framework 6 EDMX</Name>
+    <Description>An EF6 EDMX file, along with a T4 template for SDK projects that generates the proper embedded resources.</Description>
+    <Icon>Resources\EntityDatabase.png</Icon>
     <TemplateID>fbac28d4-9a3f-4867-8a81-d95ef7ada833</TemplateID>
     <ProjectType>CSharp</ProjectType>
     <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
