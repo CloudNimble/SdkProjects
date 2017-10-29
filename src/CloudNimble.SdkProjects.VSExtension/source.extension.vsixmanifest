@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="2dd37380-7b86-413a-b26c-b6b2d5e067d4" Version="1.0.0" Language="en-US" Publisher="Robert McLaws" />
+        <Identity Id="2dd37380-7b86-413a-b26c-b6b2d5e067d4" Version="0.5.0" Language="en-US" Publisher="Robert McLaws" />
         <DisplayName>SdkProject Extras for VS2017</DisplayName>
         <Description xml:space="preserve">A set of Item Templates to make writing legacy code with SdkProjects easier.</Description>
         <License>Resources\LICENSE</License>

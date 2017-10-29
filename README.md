@@ -14,18 +14,25 @@ See the [change log](CHANGELOG.md) for changes and road map.
 
 ## Features
 
-- Feature 1
-- Feature 2
-  - Sub feature
+- EF6 EDMX ItemTemplate w/ Resource Generators.
 
-### Feature 1
-Describe feature 1. Add screenshots/code samples etc.
+### EF6 EDMX ItemTemplate w/ Resource Generators
+Microsoft's Entity Framework build tasks aren't currently compatible with VS2017's new SDK projects.
+So Microsoft doesn't even let you add new EDMX files to an SDK project. If you try to open an existing EDMX 
+in a project that targets .NET Standard 2.0 first, they disable the EDMX designer.
 
-### Feature 2
-Describe feature 2. Add screenshots/code samples etc.
+In order to let developers upgrade to the new format to simplify their project files, the "Entity Framework 6 EDMX"
+item template uses the standard EF ItemTemplate and Wizard, combined with a new T4 template that replaces the
+EF MSBuild targets with a process you have more control over.
 
-#### Sub feature
-Describe sub feature. Add screenshots/code samples etc.
+The new T4 template:
+ - Removes the EDMX file from the project so it can be double-clicked and edited in the designer (stupid, I know...
+   but it works).
+ - Splits the EDMX file into separate CSDL, MSL, and SSDL resource files.
+ - Sets the generated files as "EmbeddedResource" in the project so they get compiled into the assembly properly.
+ - Sets the "LogicalName" property of each resource so they are namespaced in the assembly the way the EF6 Wizard
+   generates connection strings.
+ 
 
 ## Contribute
 Check out the [contribution guidelines](CONTRIBUTING.md)
